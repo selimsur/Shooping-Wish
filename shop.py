@@ -24,7 +24,7 @@ def check_price():
     if price_element is not None:
         price = float(price_element.get_text().replace(',', '.'))  
 
-        if price <= ISTEDIGINIZ_FIYAT:
+        if price <= PRICE:
             updater = Updater(TELEGRAM_API_KEY)
             updater.bot.send_message(chat_id=GRUP_ID, text=f'Price is down.Come on !! {price} TL')
             updater.stop()
